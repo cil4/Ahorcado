@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del ahorcado</title>
+    <link rel="stylesheet" href="css/estilos1.css"> 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href=" "><img src="imagenes/Frame 4.svg" alt="logo de alura"></a>
+            <p class="autor">Realizado por Marianela C. Gamarra</p>
+        </nav>
+    </header>
+    <div class="container" >
+        <section class="area" id="container">
+            <button class="iniciar" onclick="palabraAleatoria()">Iniciar Juego</button>
+            <button class="agregar" onclick="ir()">Agregar Palabra</button>
+        </section>
+    
+
+    <section id="nueva-palabra" class="nueva">
+        <div class="ingresar">
+            <input type="text" placeholder="Ingrese una palabra..." id="nuevaPalabra" onfocus="this.placeholder=''" onblur="this.placeholder='Ingrese una palabra'" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" maxlength="8" required>
+
+            <input type="text" placeholder="Aquí puedes escribir una pista de hasta 90 caracteres." maxlength="90" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90 ) || (event.charCode >= 97 && event.charCode <= 122 ) || (event.charCode==32) || (event.charCode==233) || (event.charCode==237) || (event.charCode==225) || (event.charCode==243) || (event.charCode==250))" id="pista">
+            
+        </div>
+        <div class="botones-agregar">
+            <h5><i class="bi bi-exclamation-circle-fill"></i> Máx. de 8 letras</h5>
+            <button type="submit" class="guardar" onclick="crearPalabraSecreta()">Guardar y empezar</button>
+            <button type="submit" class="cancelar" onclick="cancelar()">Cancelar</button>
+        </div>
+    </section>
+    </div>
+    <div class="container" id="juego">
+        <div class="juego" >
+              <article id="ahorcado">              
+                <canvas class="ahorcado" width="355" height="354"></canvas>
+              </article>
+              <section>
+                  <div class="envoltura">
+                     
+                        <div class="contentenido">
+                          <input type="text" class="typing-input" maxlength="1">
+                          <div class="inputs"></div>
+                          <hr id="linea" />
+                            <div class="detalles">
+                              <p class="pista">Pista: <span></span></p>
+                              <p class="posibilidades">Posibilidades restantes: <span></span></p>
+                              <p class="letrasErroneas">Letras equivocadas: <span></span></p>
+                            </div>
+                              <div id="boton">
+                                <button class="reset-btn">Nuevo juego</button>
+                               <a href=" "><button  class="desistir" >Desistir</button></a>
+                              </div>
+                      </div>
+                    </div>
+              </section>
+          </div>
+      </div>
+    
+
+
+
+  <script src="js/inicio.js"></script>
+  <script src="js/inputNuevaPalabra.js"></script>
+  <script src="js/ahorcado.js"></script>
+</body>
+</html>

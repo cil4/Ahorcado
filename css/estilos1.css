@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: #F3F5FC;
+}
+header{
+    margin: 1.5em;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    
+   /* height: 50vh; */
+    margin: 1em 5em;
+}
+.area {
+    margin: 0 auto;
+    
+    width: 35%;
+    
+    
+}
+
+.iniciar,  .agregar {
+    display: block;
+    margin: 4.5em auto;
+    width: 70%;
+    height: 20%;
+    cursor: pointer;
+    border-radius: 15px;
+    outline: none;
+    font-size: 1em;
+    font-weight: 300;
+    transition: 1s all;
+
+    
+}
+.iniciar, .guardar{
+    background-color: darkblue;
+    color: white;
+    border: 2px solid darkblue;
+}
+.iniciar:hover, .guardar:hover{
+    background: blue;
+    border: 2px solid blue;
+    transform: scale(1.1);
+}
+.agregar, .cancelar{
+    background-color: #e9edfa;
+    color: darkblue;
+    border: 2px solid darkblue;
+    
+}
+.agregar:hover, .cancelar:hover{
+    background-color: lightblue;
+    border: 2px solid darkblue;
+    transform: scale(1.1);
+
+}
+/* area nueva palabra*/
+.nueva{
+    margin: 0 auto;
+    width: 90%;
+    display: inline;
+    
+}
+
+ #nuevaPalabra{
+    font-size: 1.8em;
+    font-weight: 500;
+    color: darkblue;
+    border: none;
+    outline: none;
+    display: block;
+    width: 90%;
+    
+}
+#pista{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: darkblue;
+    border: none;
+    outline: none;
+    display: block;
+    width: 90%;
+    margin-top: 0.5em;
+}
+h5{
+    color: gray;
+}
+.botones-agregar{
+   
+    height: 25vh;
+    margin-top: 7%;
+    
+    
+
+   
+}
+.guardar, .cancelar{
+    margin: 0 auto;
+    width: 45%;
+    height: 40%;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1em;
+    font-weight: 300;
+    transition: 1s all;
+}
+
+input{
+    background-color: #F3F5FC;
+}
+.autor{
+  
+    float: right;
+    margin-right: 0.5em;
+    color: darkblue;
+    font-size: 1em;
+    font-weight: 400;
+  }
+
+  .juego{
+    display: block;
+    margin: 0 auto;
+    
+    width: 90%;
+  }
+  #ahorcado{
+    background: #e9edfa;
+    width: 100%;
+  }
+   
+    #linea {
+      margin: 15px;
+      color: darkblue;
+    }
+    
+    
+    
+    
+    
+    .envoltura {
+      width: 100%;
+      
+      background: #e9edfa;
+      border-radius: 10px;
+      box-shadow: 10px 10px 25px rgba(24, 24, 24, 0.1);
+      
+    }
+    .ahorcado{
+      box-shadow: 10px 10px 25px rgba(24, 24, 24, 0.1);
+      margin: 0 35%;
+    }
+    
+    
+    .envoltura .contentenido {
+      margin: 0 25px 35px;
+    }
+    
+    .contentenido .inputs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .inputs input {
+      height: 57px;
+      width: 57px;
+      margin: 4px;
+      font-size: 24px;
+      font-weight: 500;
+      color: darkblue;
+      text-align: center;
+      text-transform: uppercase;
+      border-radius: 5px;
+      border: 1px solid #B5B5B5;
+    }
+    
+    .typing-input {
+      opacity: 0;
+      z-index: -999;
+      position: absolute;
+      pointer-events: none;
+    }
+    
+    .inputs input:first-child {
+      margin-left: 0px;
+    }
+    
+    .contentenido .detalles {
+      margin: 25px 10px;
+    }
+    
+    .pista {
+      font-size: 1.2em;
+      font-weight: 600;
+      color: darkblue;
+      margin-bottom: 10px;
+    }
+    
+  .posibilidades, .letrasErroneas{
+    display:inline-flex;
+    font-size: 1em;
+    color: darkblue;
+    font-weight: 400;
+   
+  }
+  .letrasErroneas{
+    float: right;
+    margin-right: 1em;
+  }
+    
+     .reset-btn {
+      width: 20vw;
+      cursor: pointer;
+      color: #fff;
+      padding: 15px 0;
+      font-size: 1em;
+      border-radius: 15px;
+      font-weight: 400;
+      background: darkblue;
+      transition: 1s all;
+      border: 2px solid darkblue;
+      
+    }
+    
+   .reset-btn:hover {
+      background: blue;
+      transform: scale(1.1);
+    }
+    .desistir{
+    width: 20vw;
+    background-color: #e9edfa;
+    color: darkblue;
+    border: 2px solid darkblue;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 15px 0;
+    font-size: 1em;
+    font-weight: 400;
+    transition: 1s all;
+    float: right;
+    margin-bottom: 1.5em;
+  
+  }
+   .desistir:hover{
+    background-color: lightblue;
+    transform: scale(1.1);
+  }
+  #boton{
+    margin-bottom: 1.5em;
+    
+  }
+  
+
+
+
+
+  /*medias*/
+  @media screen and (max-width:780px) {
+    .container{
+        margin: 2em;
+    }
+    .area{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .botones-agregar{
+        height: 20vh;
+        margin-top: 40%;
+        width: 90vw;
+    }
+  }
+  @media screen and (max-width:550px) {
+    .container{
+        margin: 2em;
+    }
+    .area{
+        margin: 0 auto;
+        width: 90%;
+    }
+    .botones-agregar{
+        height: 20vh;
+        margin-top: 40%;
+        width: 90vw;
+    }
+    #pista{
+        font-size: 1em;
+        width: 100%; 
+    }
+  }
+  /*mi celular 390px*/
+  @media screen and (max-width:460px) {
+.autor{
+    display: inline;
+    font-size: 0.65em;
+    font-weight: 400;
+    color: darkblue;
+    padding-top: 1.5em;
+}
+.container{
+    margin: 2em;
+}
+.area{
+    margin: 0 auto;
+    width: 90%;
+}
+.iniciar, .agregar{
+    height: 15%;
+
+}
+.nueva{
+    width: 95%;
+}
+#nuevaPalabra{
+    font-size: 1.2em;
+    width: 100%;
+}
+#pista{
+    font-size: 0.7em;
+    width: 100%;
+}
+h5{
+    font-size: 0.6em;
+}
+
+.botones-agregar{
+    height: 20vh;
+    margin-top: 40%;
+    width: 90vw;
+}
+
+.guardar, .cancelar{
+    font-size: 0.9em;
+}
+  }
+
+  @media screen and (max-width:390px) {
+    .autor{
+        display: inline;
+        font-size: 0.6em;
+        font-weight: 400;
+        color: darkblue;
+        padding: 0;
+        margin: 0;
+        float: none;
+        
+        
+    } 
+    
+    #pista{
+       font-size: 0.6em; 
+    }
+    
+  }
+
+  @media screen and (max-width: 320px) {
+    .autor{
+        display: inline;
+        font-size: 0.48em;
+        font-weight: 400;
+        color: darkblue;
+        padding: 0;
+        margin: 0;
+        float: none;
+        
+        
+    } 
+    
+    #pista{
+       font-size: 0.5em; 
+    }
+    .botones-agregar{
+        height: 20vh;
+        margin-top: 50%;
+        width: 90vw;
+    }
+    .guardar, .cancelar{
+        font-size: 0.8em;
+    }
+  }
+  /*otras medidas*/
+@media screen and (max-width: 780px) {
+    .ahorcado{
+      margin: 0 25%;
+    }
+  }
+    /*Para móvil*/
+    
+    @media screen and (max-width: 460px) {
+      .envoltura {
+        width: 460px;
+      }
+    
+      .envoltura h1 {
+        font-size: 22px;
+        padding: 16px 20px;
+      }
+    
+      .envoltura .contentenido {
+        margin: 25px 20px 35px;
+      }
+    
+      .detalles p {
+        font-size: 17px;
+      }
+    
+      .inputs input {
+        height: 51px;
+        width: 50px;
+        margin: 3px;
+        font-size: 22px;
+      }
+    
+      .contentenido .reset-btn {
+        padding: 14px 0;
+        font-size: 16px;
+      }
+      .autor{
+        display: inline;
+        font-size: 0.65em;
+        font-weight: 400;
+        color: darkblue;
+        padding-top: 1.5em;
+    }
+    .ahorcado{
+      margin: 0 8%;
+    }
+    .juego{
+      width: 100%;
+  }
+  .desistir, .reset-btn{
+    width: 35%;
+  }
+    }
+    /*móvil */
+  
+    @media screen and (max-width: 390px) {
+  
+      .ahorcado{
+        margin: 0 1.5%;
+      }
+  
+      .envoltura{
+        width: 100%;
+      }
+      .letrasErroneas{
+        float: none;
+        margin-right: 0;
+      }
+    }
+    @media screen and (max-width: 320px) {
+      .ahorcado{
+        margin: 0;
+      }
+      .desistir, .reset-btn{
+        width: 40%;
+    }
+  }
